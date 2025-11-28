@@ -52,34 +52,34 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="bg-[#BFBDC1] px-4 py-16 text-[#37323E] md:px-6 md:py-20"
+      className="bg-[#BFBDC1] px-4 py-20 text-[#37323E] md:px-6 md:py-24"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-5xl">
         <SectionReveal direction="up">
-          <header className="max-w-2xl space-y-3">
+          <header className="mx-auto max-w-2xl space-y-3 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6D6A75]">
               Waarom teams Sentinel kiezen
             </p>
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               Alles wat je van RMM verwacht — zonder de ballast.
             </h2>
-            <div className="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-[#DEB841] via-[#DE9E36] to-transparent animate-glow-pulse" />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-gradient-to-r from-[#DEB841] via-[#DE9E36] to-transparent animate-glow-pulse" />
             <p className="text-sm text-[#4B4853] md:text-base">
               Sentinel brengt monitoring, patching, security en remote access
-              samen in één dashboard, zodat je team stopt met brandjes blussen
-              en proactief kan gaan sturen.
+              samen in één overzichtelijk platform, zodat je team stopt met
+              brandjes blussen en proactief kan gaan sturen.
             </p>
           </header>
         </SectionReveal>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <SectionReveal
               key={feature.title}
               direction="up"
-              delay={100 + index * 80}
+              delay={120 + index * 80}
             >
-              <Card className="group flex h-full flex-col gap-3 border-[#6D6A75]/20 bg-white/80 p-5 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#37323E]/20">
+              <Card className="group flex h-full flex-col gap-3 border-[#6D6A75]/20 bg-white/90 p-5 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#37323E]/15">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#DEB841]/15 text-[#DE9E36] transition-transform duration-300 group-hover:scale-105 group-hover:bg-[#DEB841]/25">
                   <feature.icon className="h-4 w-4" />
                 </div>

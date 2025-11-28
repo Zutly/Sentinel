@@ -22,29 +22,29 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="bg-[#DEB841] px-4 py-16 text-[#37323E] md:px-6 md:py-20"
+      className="bg-[#DEB841] px-4 py-20 text-[#37323E] md:px-6 md:py-24"
     >
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-start">
+      <div className="mx-auto flex max-w-4xl flex-col gap-10">
         <SectionReveal direction="up">
-          <div className="flex-1 space-y-4">
+          <header className="mx-auto max-w-2xl space-y-3 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6D6A75]">
               Pricing voor MSP&apos;s &amp; IT-teams
             </p>
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               Betaal alleen voor endpoints die écht beschermd moeten worden.
             </h2>
-            <div className="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-[#37323E] via-[#6D6A75] to-transparent animate-glow-pulse" />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-gradient-to-r from-[#37323E] via-[#6D6A75] to-transparent animate-glow-pulse" />
             <p className="text-sm text-[#4B4853] md:text-base">
               Sentinel werkt met transparante per-endpoint pricing met
               volumekortingen. Geen verplichte bundels, geen verborgen modules
               en geen meerjarige lock-ins.
             </p>
-          </div>
+          </header>
         </SectionReveal>
 
-        <SectionReveal direction="up" delay={150}>
-          <Card className="flex-1 border-[#37323E]/15 bg-[#FFF7DD] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#37323E]/25">
-            <div className="flex items-baseline justify-between gap-4">
+        <SectionReveal direction="up" delay={160}>
+          <Card className="mx-auto w-full max-w-xl border-[#37323E]/15 bg-[#FFF7DD] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#37323E]/25">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between">
               <div>
                 <h3 className="text-lg font-semibold text-[#37323E]">
                   Sentinel voor Teams &amp; MSP&apos;s
@@ -54,7 +54,7 @@ const Pricing = () => {
                   beheren en beveiligen.
                 </p>
               </div>
-              <div className="text-right">
+              <div className="text-left sm:text-right">
                 <p className="text-3xl font-semibold leading-tight text-[#37323E]">
                   Laten we praten
                 </p>

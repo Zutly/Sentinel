@@ -21,18 +21,18 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="bg-[#BFBDC1] px-4 py-16 text-[#37323E] md:px-6 md:py-20"
+      className="bg-[#BFBDC1] px-4 py-20 text-[#37323E] md:px-6 md:py-24"
     >
-      <div className="mx-auto max-w-5xl space-y-8">
+      <div className="mx-auto max-w-5xl space-y-10">
         <SectionReveal direction="up">
-          <header className="max-w-2xl space-y-3">
+          <header className="mx-auto max-w-2xl space-y-3 text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6D6A75]">
               Bewezen in het veld
             </p>
             <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
               Teams die Sentinel draaien, slapen beter.
             </h2>
-            <div className="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-[#DEB841] via-[#DE9E36] to-transparent animate-glow-pulse" />
+            <div className="mx-auto mt-2 h-0.5 w-20 rounded-full bg-gradient-to-r from-[#DEB841] via-[#DE9E36] to-transparent animate-glow-pulse" />
             <p className="text-sm text-[#4B4853] md:text-base">
               Sentinel is samen met MSP- en enterprise IT-leiders ontworpen die
               genoeg hadden van fragiele, luidruchtige tools. Resultaat: een
@@ -41,14 +41,14 @@ const Testimonials = () => {
           </header>
         </SectionReveal>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {testimonials.map((t, index) => (
             <SectionReveal
               key={t.name}
               direction="up"
-              delay={100 + index * 120}
+              delay={120 + index * 120}
             >
-              <Card className="group flex h-full flex-col gap-4 border-[#6D6A75]/20 bg-white/90 p-6 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#37323E]/20">
+              <Card className="group flex h-full flex-col gap-4 border-[#6D6A75]/20 bg-white/95 p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#37323E]/20">
                 <Quote className="h-6 w-6 text-[#DEB841] transition-transform duration-300 group-hover:scale-110" />
                 <p className="text-sm leading-relaxed text-[#37323E]">
                   “{t.quote}”
