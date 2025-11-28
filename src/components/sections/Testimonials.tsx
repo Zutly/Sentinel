@@ -25,15 +25,16 @@ const Testimonials = () => {
       <div className="mx-auto max-w-5xl space-y-8">
         <header className="max-w-2xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6D6A75]">
-            Proven in the field
+            Bewezen in het veld
           </p>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Teams who run Sentinel sleep better.
+            Teams die Sentinel draaien, slapen beter.
           </h2>
+          <div className="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-[#DEB841] via-[#DE9E36] to-transparent animate-glow-pulse" />
           <p className="text-sm text-[#4B4853] md:text-base">
-            Sentinel was designed with MSP and enterprise IT leaders who were
-            tired of fragile, noisy tools. The result: a focused platform that
-            keeps your environment quiet and secure.
+            Sentinel is samen met MSP- en enterprise IT-leiders ontworpen die
+            genoeg hadden van fragiele, luidruchtige tools. Resultaat: een
+            gefocuste platform dat jouw omgeving stil én veilig houdt.
           </p>
         </header>
 
@@ -41,9 +42,9 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <Card
               key={t.name}
-              className="flex h-full flex-col gap-4 border-[#6D6A75]/20 bg-white/90 p-6"
+              className="group flex h-full flex-col gap-4 border-[#6D6A75]/20 bg-white/90 p-6 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#37323E]/20"
             >
-              <Quote className="h-6 w-6 text-[#DEB841]" />
+              <Quote className="h-6 w-6 text-[#DEB841] transition-transform duration-300 group-hover:scale-110" />
               <p className="text-sm leading-relaxed text-[#37323E]">
                 “{t.quote}”
               </p>

@@ -56,15 +56,16 @@ const Features = () => {
       <div className="mx-auto max-w-6xl">
         <header className="max-w-2xl space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6D6A75]">
-            Why teams choose Sentinel
+            Waarom teams Sentinel kiezen
           </p>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Everything you expect from RMM — without the baggage.
+            Alles wat je van RMM verwacht — zonder de ballast.
           </h2>
+          <div className="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-[#DEB841] via-[#DE9E36] to-transparent animate-glow-pulse" />
           <p className="text-sm text-[#4B4853] md:text-base">
-            Sentinel consolidates monitoring, patching, security, and access
-            into a single dashboard so your team stops firefighting and starts
-            operating proactively.
+            Sentinel brengt monitoring, patching, security en remote access
+            samen in één dashboard, zodat je team stopt met brandjes blussen en
+            proactief kan gaan sturen.
           </p>
         </header>
 
@@ -72,9 +73,9 @@ const Features = () => {
           {features.map((feature) => (
             <Card
               key={feature.title}
-              className="flex h-full flex-col gap-3 border-[#6D6A75]/20 bg-white/80 p-5 shadow-sm"
+              className="group flex h-full flex-col gap-3 border-[#6D6A75]/20 bg-white/80 p-5 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#37323E]/20"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#DEB841]/15 text-[#DE9E36]">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#DEB841]/15 text-[#DE9E36] transition-transform duration-300 group-hover:scale-105 group-hover:bg-[#DEB841]/25">
                 <feature.icon className="h-4 w-4" />
               </div>
               <h3 className="text-sm font-semibold text-[#37323E]">

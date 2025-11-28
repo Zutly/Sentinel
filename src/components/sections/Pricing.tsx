@@ -13,7 +13,9 @@ const included = [
 
 const Pricing = () => {
   const handleTalkSalesClick = () => {
-    showSuccess("Sales will follow up with tailored Sentinel pricing for your environment.");
+    showSuccess(
+      "Sales will follow up with tailored Sentinel pricing for your environment.",
+    );
   };
 
   return (
@@ -24,31 +26,33 @@ const Pricing = () => {
       <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-start">
         <div className="flex-1 space-y-4">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6D6A75]">
-            Pricing built for MSPs &amp; IT
+            Pricing voor MSP&apos;s &amp; IT-teams
           </p>
           <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-            Pay only for endpoints that actually need protecting.
+            Betaal alleen voor endpoints die écht beschermd moeten worden.
           </h2>
+          <div className="mt-1 h-0.5 w-16 rounded-full bg-gradient-to-r from-[#37323E] via-[#6D6A75] to-transparent animate-glow-pulse" />
           <p className="text-sm text-[#4B4853] md:text-base">
-            Sentinel uses straightforward, per-endpoint pricing with volume
-            discounts. No surprise modules, no mandatory “suites”, and no
-            multi-year lock-ins.
+            Sentinel werkt met transparante per-endpoint pricing met
+            volumekortingen. Geen verplichte bundels, geen verborgen modules en
+            geen meerjarige lock-ins.
           </p>
         </div>
 
-        <Card className="flex-1 border-[#37323E]/15 bg-[#FFF7DD] p-6 shadow-lg">
+        <Card className="flex-1 border-[#37323E]/15 bg-[#FFF7DD] p-6 shadow-lg transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#37323E]/25">
           <div className="flex items-baseline justify-between gap-4">
             <div>
               <h3 className="text-lg font-semibold text-[#37323E]">
-                Sentinel for Teams &amp; MSPs
+                Sentinel voor Teams &amp; MSP&apos;s
               </h3>
               <p className="mt-1 text-xs text-[#4B4853]">
-                Everything you need to monitor, manage, and secure endpoints at scale.
+                Alles wat je nodig hebt om endpoints op schaal te monitoren,
+                beheren en beveiligen.
               </p>
             </div>
             <div className="text-right">
               <p className="text-3xl font-semibold leading-tight text-[#37323E]">
-                Let&apos;s talk
+                Laten we praten
               </p>
               <p className="text-[11px] text-[#6D6A75]">
                 Volume-based per-endpoint pricing
@@ -68,13 +72,13 @@ const Pricing = () => {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <Button
               size="lg"
-              className="w-full rounded-full bg-[#37323E] text-sm font-semibold text-[#BFBDC1] shadow-md hover:bg-[#2A2631] sm:w-auto"
+              className="w-full rounded-full bg-[#37323E] text-sm font-semibold text-[#BFBDC1] shadow-md transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#2A2631] sm:w-auto"
               onClick={handleTalkSalesClick}
             >
-              Talk to sales
+              Plan een gesprek met sales
             </Button>
             <p className="text-[11px] text-[#6D6A75]">
-              Typical partners see ROI within the first 90 days.
+              De meeste partners zien ROI binnen de eerste 90 dagen.
             </p>
           </div>
         </Card>
