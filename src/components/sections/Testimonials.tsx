@@ -23,7 +23,7 @@ const Testimonials = () => {
       className="bg-[#BFBDC1] px-4 py-16 text-[#37323E] md:px-6 md:py-20"
     >
       <div className="mx-auto max-w-5xl space-y-8">
-        <header className="max-w-2xl space-y-3">
+        <header className="max-w-2xl space-y-3 animate-in fade-in-50 slide-in-from-bottom-2 duration-500">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6D6A75]">
             Proven in the field
           </p>
@@ -38,10 +38,11 @@ const Testimonials = () => {
         </header>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {testimonials.map((t) => (
+          {testimonials.map((t, index) => (
             <Card
               key={t.name}
-              className="flex h-full flex-col gap-4 border-[#6D6A75]/20 bg-white/90 p-6"
+              className="flex h-full flex-col gap-4 border-[#6D6A75]/20 bg-white/90 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-[#DEB841]/70 hover:shadow-lg"
+              style={{ transitionDelay: `${index * 60}ms` }}
             >
               <Quote className="h-6 w-6 text-[#DEB841]" />
               <p className="text-sm leading-relaxed text-[#37323E]">

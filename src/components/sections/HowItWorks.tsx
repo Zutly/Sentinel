@@ -26,7 +26,7 @@ const HowItWorks = () => {
       className="bg-[#37323E] px-4 py-16 text-[#BFBDC1] md:px-6 md:py-20"
     >
       <div className="mx-auto max-w-5xl">
-        <header className="max-w-2xl space-y-3">
+        <header className="max-w-2xl space-y-3 animate-in fade-in slide-in-from-bottom-2 duration-500">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#DEB841]">
             How Sentinel works
           </p>
@@ -44,10 +44,11 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <Card
               key={step.title}
-              className="flex h-full flex-col gap-3 border-[#BFBDC1]/20 bg-[#6D6A75]/40 p-5"
+              className="group flex h-full flex-col gap-3 border-[#BFBDC1]/20 bg-[#6D6A75]/40 p-5 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#DEB841]/70 hover:bg-[#6D6A75]/60"
+              style={{ transitionDelay: `${index * 60}ms` }}
             >
               <div className="flex items-center justify-between text-xs text-[#E6E3EB]/80">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#DEB841]/15 text-[#DEB841]">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#DEB841]/15 text-[#DEB841] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">
                   <step.icon className="h-4 w-4" />
                 </span>
                 <span className="rounded-full bg-[#37323E] px-2 py-1 text-[10px] font-medium uppercase tracking-wide text-[#BFBDC1]">

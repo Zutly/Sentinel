@@ -13,7 +13,9 @@ const included = [
 
 const Pricing = () => {
   const handleTalkSalesClick = () => {
-    showSuccess("Sales will follow up with tailored Sentinel pricing for your environment.");
+    showSuccess(
+      "Sales will follow up with tailored Sentinel pricing for your environment."
+    );
   };
 
   return (
@@ -22,7 +24,7 @@ const Pricing = () => {
       className="bg-[#DEB841] px-4 py-16 text-[#37323E] md:px-6 md:py-20"
     >
       <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-start">
-        <div className="flex-1 space-y-4">
+        <div className="flex-1 space-y-4 animate-in fade-in slide-in-from-left-3 duration-500">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#6D6A75]">
             Pricing built for MSPs &amp; IT
           </p>
@@ -36,14 +38,15 @@ const Pricing = () => {
           </p>
         </div>
 
-        <Card className="flex-1 border-[#37323E]/15 bg-[#FFF7DD] p-6 shadow-lg">
+        <Card className="flex-1 border-[#37323E]/15 bg-[#FFF7DD] p-6 shadow-lg transition-all duration-300 animate-in fade-in slide-in-from-right-3 hover:-translate-y-1.5 hover:shadow-xl">
           <div className="flex items-baseline justify-between gap-4">
             <div>
               <h3 className="text-lg font-semibold text-[#37323E]">
                 Sentinel for Teams &amp; MSPs
               </h3>
               <p className="mt-1 text-xs text-[#4B4853]">
-                Everything you need to monitor, manage, and secure endpoints at scale.
+                Everything you need to monitor, manage, and secure endpoints at
+                scale.
               </p>
             </div>
             <div className="text-right">
@@ -58,7 +61,10 @@ const Pricing = () => {
 
           <ul className="mt-4 space-y-2 text-xs text-[#4B4853]">
             {included.map((item) => (
-              <li key={item} className="flex items-start gap-2">
+              <li
+                key={item}
+                className="flex items-start gap-2 transition-transform duration-200 hover:translate-x-1"
+              >
                 <Check className="mt-[2px] h-4 w-4 flex-none text-[#DE9E36]" />
                 <span>{item}</span>
               </li>
@@ -68,7 +74,7 @@ const Pricing = () => {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <Button
               size="lg"
-              className="w-full rounded-full bg-[#37323E] text-sm font-semibold text-[#BFBDC1] shadow-md hover:bg-[#2A2631] sm:w-auto"
+              className="w-full rounded-full bg-[#37323E] text-sm font-semibold text-[#BFBDC1] shadow-md transition-transform duration-200 hover:-translate-y-0.5 hover:bg-[#2A2631] hover:shadow-lg sm:w-auto"
               onClick={handleTalkSalesClick}
             >
               Talk to sales
