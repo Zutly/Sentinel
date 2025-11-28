@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { showSuccess } from "@/utils/toast";
+import SentinelOrbits from "@/components/visual/SentinelOrbits";
 
 const Hero = () => {
   const handleDemoClick = () => {
@@ -20,6 +21,10 @@ const Hero = () => {
       id="top"
       className="relative overflow-hidden bg-gradient-to-br from-[#37323E] via-[#6D6A75] to-[#DE9E36] px-4 py-16 text-[#BFBDC1] md:px-6 md:py-24"
     >
+      {/* Animated background orbits / pulses */}
+      <SentinelOrbits />
+
+      {/* Soft background blobs */}
       <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-[#DEB841]/20 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-72 w-72 rounded-full bg-[#37323E]/40 blur-3xl" />
 
@@ -80,9 +85,9 @@ const Hero = () => {
         </div>
 
         <div className="flex-1 w-full max-w-md">
-          <div className="relative">
+          <div className="relative group">
             <div className="pointer-events-none absolute -inset-6 rounded-[32px] bg-gradient-to-br from-[#DEB841]/40 via-transparent to-[#6D6A75]/60 opacity-60 blur-3xl animate-glow-pulse" />
-            <Card className="relative overflow-hidden rounded-3xl border border-[#BFBDC1]/40 bg-[#37323E]/95 p-5 text-left shadow-2xl animate-float-slow">
+            <Card className="relative overflow-hidden rounded-3xl border border-[#BFBDC1]/40 bg-[#37323E]/95 p-5 text-left shadow-2xl transition-transform duration-300 animate-float-slow group-hover:-translate-y-1 group-hover:scale-[1.01]">
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#DEB841]/10 text-[#DEB841]">
