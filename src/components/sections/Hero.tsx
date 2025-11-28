@@ -6,9 +6,7 @@ import { showSuccess } from "@/utils/toast";
 
 const Hero = () => {
   const handleDemoClick = () => {
-    showSuccess(
-      "Demo request received — check your inbox within 1 business day."
-    );
+    showSuccess("Demo request received — check your inbox within 1 business day.");
   };
 
   const handleDocsClick = () => {
@@ -18,16 +16,10 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-gradient-to-br from-[#37323E] via-[#6D6A75] to-[#DE9E36] px-4 py-16 text-[#BFBDC1] md:px-6 md:py-24"
+      className="bg-gradient-to-br from-[#37323E] via-[#6D6A75] to-[#DE9E36] px-4 py-16 text-[#BFBDC1] md:px-6 md:py-24"
     >
-      <div
-        className="pointer-events-none absolute -inset-x-40 -top-40 h-64 bg-[radial-gradient(circle_at_top,_rgba(222,184,65,0.5),_transparent_60%)] opacity-70 blur-3xl"
-        aria-hidden="true"
-      />
-      <div className="pointer-events-none absolute bottom-[-120px] right-[-80px] h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(55,50,62,0.9),_transparent_60%)] blur-3xl" />
-
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row md:gap-16">
-        <div className="flex-1 space-y-6 animate-in fade-in slide-in-from-left-4 duration-700">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row md:gap-16">
+        <div className="flex-1 space-y-6">
           <Badge className="border border-[#BFBDC1]/30 bg-[#37323E]/60 text-xs font-normal uppercase tracking-[0.2em] text-[#BFBDC1]">
             Remote Monitoring &amp; Management
           </Badge>
@@ -46,46 +38,43 @@ const Hero = () => {
           <div className="flex flex-wrap items-center gap-3">
             <Button
               size="lg"
-              className="group gap-2 rounded-full bg-[#DEB841] px-6 text-sm font-semibold text-[#37323E] shadow-lg shadow-black/20 transition-transform duration-200 hover:translate-y-[-2px] hover:bg-[#DE9E36] hover:shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+              className="gap-2 rounded-full bg-[#DEB841] px-6 text-sm font-semibold text-[#37323E] shadow-lg shadow-black/20 hover:bg-[#DE9E36]"
               onClick={handleDemoClick}
             >
               Book a live demo
-              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full border-[#BFBDC1]/40 bg-[#37323E]/40 px-6 text-sm font-semibold text-[#BFBDC1] transition-colors transition-transform duration-200 hover:-translate-y-0.5 hover:border-[#DEB841]/70 hover:bg-[#6D6A75] hover:text-white"
+              className="rounded-full border-[#BFBDC1]/40 bg-[#37323E]/40 px-6 text-sm font-semibold text-[#BFBDC1] hover:bg-[#6D6A75]"
               onClick={handleDocsClick}
             >
               Explore the docs
             </Button>
             <div className="flex items-center gap-2 text-xs text-[#E6E3EB]/80">
               <Activity className="h-4 w-4 text-[#DEB841]" />
-              <span>
-                Proactive alerts • Automated patching • .NET / ASP.NET core
-              </span>
+              <span>Proactive alerts • Automated patching • .NET / ASP.NET core</span>
             </div>
           </div>
 
           <dl className="mt-4 grid w-full grid-cols-2 gap-4 text-xs text-[#E6E3EB]/80 md:max-w-md">
-            <div className="space-y-1">
+            <div>
               <dt className="font-semibold text-white">Endpoints under watch</dt>
               <dd>From 50 to 50,000+ devices across sites.</dd>
             </div>
-            <div className="space-y-1">
+            <div>
               <dt className="font-semibold text-white">Ticket volume</dt>
               <dd>Partners report up to 40% fewer reactive tickets.</dd>
             </div>
           </dl>
         </div>
 
-        <div className="flex-1 w-full max-w-md animate-in fade-in-50 slide-in-from-right-4 duration-700">
-          <Card className="group relative overflow-hidden rounded-3xl border-[#BFBDC1]/40 bg-[#37323E]/95 p-5 text-left shadow-2xl transition-transform duration-500 hover:-translate-y-1 hover:shadow-[0_30px_100px_rgba(0,0,0,0.8)]">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[radial-gradient(circle,_rgba(222,184,65,0.4),_transparent_60%)] opacity-60 blur-2xl" />
+        <div className="flex-1 w-full max-w-md">
+          <Card className="relative overflow-hidden rounded-3xl border-[#BFBDC1]/40 bg-[#37323E]/95 p-5 text-left shadow-2xl">
             <div className="mb-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#DEB841]/10 text-[#DEB841] transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105">
+                <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#DEB841]/10 text-[#DEB841]">
                   <MonitorSmartphone className="h-4 w-4" />
                 </span>
                 <div>
@@ -103,7 +92,7 @@ const Hero = () => {
             </div>
 
             <div className="grid gap-3 text-xs md:grid-cols-3">
-              <div className="rounded-xl bg-[#6D6A75] p-3 text-[#F7F4FB] transition-transform duration-200 group-hover:-translate-y-1">
+              <div className="rounded-xl bg-[#6D6A75] p-3 text-[#F7F4FB]">
                 <p className="text-[11px] font-medium uppercase tracking-wide">
                   Endpoints healthy
                 </p>
@@ -112,7 +101,7 @@ const Hero = () => {
                   Real-time health &amp; uptime.
                 </p>
               </div>
-              <div className="rounded-xl bg-[#37323E] p-3 text-[#F7F4FB] transition-transform duration-200 group-hover:-translate-y-1 group-hover:delay-75">
+              <div className="rounded-xl bg-[#37323E] p-3 text-[#F7F4FB]">
                 <p className="text-[11px] font-medium uppercase tracking-wide">
                   Patch compliance
                 </p>
@@ -121,7 +110,7 @@ const Hero = () => {
                   Automated maintenance windows.
                 </p>
               </div>
-              <div className="rounded-xl bg-[#DEB841] p-3 text-[#37323E] transition-transform duration-200 group-hover:-translate-y-1 group-hover:delay-150">
+              <div className="rounded-xl bg-[#DEB841] p-3 text-[#37323E]">
                 <p className="text-[11px] font-semibold uppercase tracking-wide">
                   Critical alerts
                 </p>
