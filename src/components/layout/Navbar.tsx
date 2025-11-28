@@ -10,31 +10,28 @@ const Navbar = () => {
   };
 
   return (
-    <header className="sticky top-0 z-30 border-b border-[#E0DEE8] bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-[#6D6A75]/30 bg-[#37323E]/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6">
-        <a
-          href="#top"
-          className="flex items-center gap-2 text-sm font-semibold tracking-tight text-[#37323E]"
-        >
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#DEB841]/15 text-[#DEB841]">
+        <a href="#top" className="flex items-center gap-2 text-sm font-semibold tracking-tight text-[#DEB841]">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#DEB841]/10 text-[#DEB841]">
             <ShieldCheck className="h-5 w-5" />
           </span>
-          <span className="text-base uppercase tracking-[0.2em] text-[#6D6A75]">
+          <span className="text-base uppercase tracking-[0.2em] text-[#BFBDC1]">
             sentinel
           </span>
         </a>
 
-        <nav className="hidden items-center gap-6 text-xs font-medium text-[#6D6A75] md:flex">
-          <a href="#features" className="hover:text-[#37323E]">
+        <nav className="hidden items-center gap-6 text-sm font-medium text-[#BFBDC1] md:flex">
+          <a href="#features" className="hover:text-[#DEB841]">
             Features
           </a>
-          <a href="#docs" className="hover:text-[#37323E]">
-            Hoe het werkt
+          <a href="#docs" className="hover:text-[#DEB841]">
+            How it works
           </a>
-          <a href="#pricing" className="hover:text-[#37323E]">
+          <a href="#pricing" className="hover:text-[#DEB841]">
             Pricing
           </a>
-          <a href="#testimonials" className="hover:text-[#37323E]">
+          <a href="#testimonials" className="hover:text-[#DEB841]">
             Proof
           </a>
         </nav>
@@ -42,16 +39,16 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Button
             variant="ghost"
-            className="hidden rounded-full border border-[#E0DEE8] bg-white/40 px-4 text-xs font-medium text-[#37323E] hover:bg-white md:inline-flex"
+            className="hidden border border-[#BFBDC1]/30 text-xs font-medium text-[#BFBDC1] hover:bg-[#6D6A75] md:inline-flex"
             asChild
           >
-            <a href="#docs">Bekijk de docs</a>
+            <a href="#docs">Explore the docs</a>
           </Button>
           <Button
-            className="rounded-full bg-[#37323E] px-4 text-xs font-semibold text-[#BFBDC1] hover:bg-[#2A2631]"
+            className="bg-[#DEB841] px-4 text-xs font-semibold text-[#37323E] hover:bg-[#DE9E36]"
             onClick={handleBookDemoClick}
           >
-            Boek een demo
+            Book a demo
           </Button>
         </div>
       </div>
